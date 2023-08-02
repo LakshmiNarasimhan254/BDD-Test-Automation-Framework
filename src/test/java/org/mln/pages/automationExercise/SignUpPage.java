@@ -56,7 +56,7 @@ public class SignUpPage extends BasePage {
     }
 
     public void enterPassword(String password) {
-        seleniumInteractionsUtil.enterText(txtbxPassword, DecodeUtil.base64Decode(password),WaitConditions.VISIBLE,"Password");
+        seleniumInteractionsUtil.enterText(txtbxPassword, password,WaitConditions.VISIBLE,"Password");
     }
 
     public void enterDate(String date) {
@@ -75,8 +75,13 @@ public class SignUpPage extends BasePage {
     public void checkSignUpForNewsLetter() {
         seleniumInteractionsUtil.check(chkbxSignUpForNewsLetter,WaitConditions.CLICKABLE,"Sign up check box");
     }
-
+    public void unCheckSignUpForNewsLetter() {
+        seleniumInteractionsUtil.unCheck(chkbxSignUpForNewsLetter,WaitConditions.CLICKABLE,"Sign up check box");
+    }
     public void chkbxReceiveSpecialOffers() {
+        seleniumInteractionsUtil.check(chkbxReceiveSpecialOffers,WaitConditions.CLICKABLE,"Receive Special check box");
+    }
+    public void unChkbxReceiveSpecialOffers() {
         seleniumInteractionsUtil.check(chkbxReceiveSpecialOffers,WaitConditions.CLICKABLE,"Receive Special check box");
     }
 

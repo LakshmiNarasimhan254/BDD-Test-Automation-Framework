@@ -10,12 +10,12 @@ public class HomePage extends BasePage
 {
         WebDriver driver = null;
 
-        private By lnkSignup = By.xpath("//a[contains(text(),'Signup / Login')]");
+        private By lnkSignupLogin = By.xpath("//a[contains(text(),'Signup / Login')]");
         private By lnkDeleteAccount = By.xpath("//a[contains(text(),'Delete Account')]");
         private By txtLoggedUser = By.xpath("//a[contains(text(),' Logged in as ')]/b");
 
-        public void clickSignUp(){
-                seleniumInteractionsUtil.click(lnkSignup, WaitConditions.CLICKABLE,"Signup Link");
+        public void clickSignUpLogin(){
+                seleniumInteractionsUtil.click(lnkSignupLogin, WaitConditions.CLICKABLE,"Signup / Login Link");
         }
         public void clickDeleteAccount(){
                 seleniumInteractionsUtil.click(lnkDeleteAccount,WaitConditions.CLICKABLE,"Delete Account Link");
